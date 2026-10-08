@@ -1,0 +1,15 @@
+# Solo se versiona lo que está en esta lista
+/*
+!/.gitignore
+!/README.md
+!/app/
+!/notebooks/
+!/infra/
+!/sql/
+!/docs/
+
+# Nunca se suben
+.venv/
+__pycache__/
+.DS_Store
+*.zip

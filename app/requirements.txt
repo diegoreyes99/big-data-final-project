@@ -1,0 +1,5 @@
+streamlit
+pandas
+numpy
+xgboost-cpu ; sys_platform == "linux"
+xgboost ; sys_platform != "linux"
