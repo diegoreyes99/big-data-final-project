@@ -40,7 +40,7 @@ def predict(date, hour, temp_c, prcp_mm, snow):
     return out.sort_values("expected_trips", ascending=False)
 
 
-st.title("Taxis de Chicago: demanda por zona y hora")
+st.title("Taxis de Chicago: demanda por zona y hora by Diego Reyes")
 tab_dashboard, tab_single, tab_batch = st.tabs(["Tablero", "Pronóstico", "Pronóstico por archivo"])
 
 with tab_dashboard:
