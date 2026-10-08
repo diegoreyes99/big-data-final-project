@@ -40,7 +40,7 @@ def predict(date, hour, temp_c, prcp_mm, snow):
     return out.sort_values("expected_trips", ascending=False)
 
 
-st.title("Taxis de Chicago: demanda por zona y hora by Diego Reyes")
+st.title("Taxis de Chicago demanda por zona y hora")
 tab_dashboard, tab_single, tab_batch = st.tabs(["Tablero", "Pronóstico", "Pronóstico por archivo"])
 
 with tab_dashboard:
@@ -78,7 +78,8 @@ with tab_dashboard:
 
 with tab_single:
     c1, c2, c3, c4, c5 = st.columns(5)
-    date = c1.date_input("Fecha", dt.date.today() + dt.timedelta(days=1))
+    date = c1.date_input("Fecha", dt.date.today() + dt.timedelta(days=1),
+                         min_value=dt.date(2024, 1, 1), max_value=dt.date(2028, 12, 31))
     hour = c2.slider("Hora", 0, 23, 18)
     temp_c = c3.number_input("Temperatura (°C)", -30.0, 45.0, 10.0)
     prcp_mm = c4.number_input("Lluvia (mm)", 0.0, 150.0, 0.0)
